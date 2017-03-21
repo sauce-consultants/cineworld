@@ -8,19 +8,19 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
   1. Add `cineworld` to your list of dependencies in `mix.exs`:
 
-    ```
-    def deps do
-      [{:cineworld, "~> 0.1.0"}]
-    end
-    ```
+  ```
+  def deps do
+    [{:cineworld, "~> 0.1.0"}]
+  end
+  ```
 
   2. Ensure `cineworld` is started before your application:
 
-    ```
-    def application do
-      [applications: [:cineworld]]
-    end
-    ```
+  ```
+  def application do
+    [applications: [:cineworld]]
+  end
+  ```
 
 ## Configuration
 
