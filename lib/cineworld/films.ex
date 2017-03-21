@@ -4,8 +4,9 @@ defmodule Cineworld.Films do
   """
 
   def get(cinema_id, edi) do
-    %{films: films} = Cineworld.Client.request("films", %{cinema: cinema_id, edi: edi, full: "true"})
-    films |> List.first
+    %{films: films} = Cineworld.Client.request("films", %{cinema: cinema_id, full: "true"})
+
+    films |> Enum.find(fn(film) -> film[:edi] == edi end)
   end
 
   def list(cinema_id) do

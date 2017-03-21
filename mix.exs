@@ -29,7 +29,8 @@ defmodule Cineworld.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.10.0"},
-      {:exjsx, "~> 3.2.0", app: false}
+      {:exjsx, "~> 3.2.0", app: false},
+      {:floki, "~> 0.15.0"}
     ]
   end
 end
