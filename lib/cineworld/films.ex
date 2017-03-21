@@ -1,6 +1,6 @@
 defmodule Cineworld.Films do
   @moduledoc """
-  Get Film details for a givne cinema
+  Get Film details for a given cinema
   """
 
   def get(cinema_id, edi) do
