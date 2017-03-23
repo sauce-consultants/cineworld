@@ -28,5 +28,22 @@ defmodule Cineworld.Films.Scraper do
     context |> Map.put(:synopsis, synopsis)
   end
 
+  def get_running_time(%{:html => html} = context) do
+    running_time =
+      Floki.find(html, ".dark.collapse.in .info-descr")
+      |> List.last
+      |> Floki.text
+
+    context |> Map.put(:running_time, running_time |> String.replace(" minutes", ""))
+  end
+
+  def get_director(%{:html => html} = context) do
+    director =
+      Floki.find(html, ".tbl-cell-descr.director span")
+      |> Floki.text
+
+    context |> Map.put(:director, director)
+  end
+
 
 end

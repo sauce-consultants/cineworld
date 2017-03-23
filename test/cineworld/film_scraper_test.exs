@@ -26,5 +26,21 @@ defmodule CineworldFilmScraperTest do
     assert synopsis == "Based on the internationally-acclaimed sci-fi property, “GHOST IN THE SHELL” follows Major, a special ops, one-of-a-kind human-cyborg hybrid, who leads the elite task force Section 9. Devoted to stopping the most dangerous criminals and extremists, Section 9 is faced with an enemy whose singular goal is to wipe out Hanka Robotic’s advancements in cyber technology."
   end
 
+  test "can retrieve running time" do
+    %{running_time: running_time} =
+      Scraper.load_page(@cinema_id, @film_id)
+      |> Scraper.get_running_time
+
+    assert running_time == "107"
+  end
+
+  test "can retrieve director" do
+    %{director: director} =
+      Scraper.load_page(@cinema_id, @film_id)
+      |> Scraper.get_director
+
+    assert director == "Rupert Sanders"
+  end
+
 
 end
