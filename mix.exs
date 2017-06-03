@@ -28,7 +28,7 @@ defmodule Cineworld.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.10.0"},
+      {:httpoison, "~> 0.11.1"},
       {:exjsx, "~> 3.2.0", app: false},
       {:floki, "~> 0.15.0"}
     ]
